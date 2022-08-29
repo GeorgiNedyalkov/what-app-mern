@@ -20,6 +20,8 @@
   - Add "type": "module" in package.json to get es6 import syntax
 - Configure app
   - Set up import express, create an app instance, specify a port, add a home route, add a listener
+  - Install nodemon,and dotenv
+  - Connect to MongoDB
 - Middlewares
 - DB config
 - ???

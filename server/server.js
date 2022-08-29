@@ -1,11 +1,18 @@
 import express from "express"
+import mongoose from "mongoose"
 
 const app = express()
-const port = processs.env.PORT || 9000
+const port = 9000 || process.env.PORT
 
 // middlewares
 
 // DB config
+const CONNECTION_URL = `mongodb+srv://gnedyalkov94:y1tQsElrqhydvS4t@cluster0.3xy7ihz.mongodb.net/whatsappdb?retryWrites=true&w=majority`
+
+mongoose.connect(CONNECTION_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 
 // ????
 
