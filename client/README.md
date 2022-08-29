@@ -25,6 +25,7 @@
   - Define our Data Schema
 - Middlewares
   - Add express json middleware
+  - Add Header: Do not do this in production environment
 - ???
 - Api routes
 
@@ -37,3 +38,8 @@
   - Require it in
   - Add change streams to trigger pusher
 - Listener
+
+TODO:
+
+- Secure your database: level 1 security
+- Add end to end encryption

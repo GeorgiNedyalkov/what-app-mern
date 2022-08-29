@@ -17,6 +17,13 @@ const pusher = new Pusher({
 // middlewares
 app.use(express.json())
 
+// Cors headers
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*")
+  res.setHeader("Access-Control-Allow-Headers", "*")
+  next()
+})
+
 // DB config
 const CONNECTION_URL = `mongodb+srv://gnedyalkov94:y1tQsElrqhydvS4t@cluster0.3xy7ihz.mongodb.net/whatsappdb?retryWrites=true&w=majority`
 
@@ -24,8 +31,6 @@ mongoose.connect(CONNECTION_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-
-// ????
 
 const db = mongoose.connection
 
@@ -41,7 +46,7 @@ db.once("open", () => {
     if (change.operationType === "insert") {
       const messageDetails = change.fullDocument
       pusher.trigger("messages", "inserted", {
-        name: messageDetails.user,
+        name: messageDetails.name,
         message: messageDetails.message,
       })
     } else {
