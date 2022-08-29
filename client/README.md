@@ -35,4 +35,5 @@
   - Copy the configuration file
   - Install Pusha
   - Require it in
+  - Add change streams to trigger pusher
 - Listener
