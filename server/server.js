@@ -2,6 +2,7 @@ import express from "express"
 import mongoose from "mongoose"
 import Messages from "./dbMessages.js"
 import Pusher from "pusher"
+import cors from "cors"
 
 const app = express()
 const port = 9000 || process.env.PORT
@@ -16,13 +17,7 @@ const pusher = new Pusher({
 
 // middlewares
 app.use(express.json())
-
-// Cors headers
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*")
-  res.setHeader("Access-Control-Allow-Headers", "*")
-  next()
-})
+app.use(cors())
 
 // DB config
 const CONNECTION_URL = `mongodb+srv://gnedyalkov94:y1tQsElrqhydvS4t@cluster0.3xy7ihz.mongodb.net/whatsappdb?retryWrites=true&w=majority`
@@ -48,6 +43,8 @@ db.once("open", () => {
       pusher.trigger("messages", "inserted", {
         name: messageDetails.name,
         message: messageDetails.message,
+        timestamp: messageDetails.timestamp,
+        received: messageDetails.received,
       })
     } else {
       console.log("Error triggering Pusher")

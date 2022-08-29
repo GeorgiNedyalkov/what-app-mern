@@ -21,12 +21,13 @@
 - Configure app
   - Set up import express, create an app instance, specify a port, add a home route, add a listener
   - Install nodemon,and dotenv
+  - Add Listener
   - Connect to MongoDB
   - Define our Data Schema
 - Middlewares
   - Add express json middleware
   - Add Header: Do not do this in production environment
-- ???
+  - Install Cors
 - Api routes
 
   - POST - create new message
@@ -37,9 +38,18 @@
   - Install Pusha
   - Require it in
   - Add change streams to trigger pusher
-- Listener
+- Connect to Frontend
+
+  - Install Pusher.js
+  - Install Axios
+  - Set up an instance of axios
+
+- Deploy to Herouku
 
 TODO:
 
 - Secure your database: level 1 security
 - Add end to end encryption
+- Add authentication: Watch the other whats app build
+- Add keys
+- Add rooms support
