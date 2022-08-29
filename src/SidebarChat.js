@@ -1,6 +1,6 @@
-import React from "react";
-import "./SidebarChat.css";
-import { Avatar } from "@mui/material";
+import React from "react"
+import "./SidebarChat.css"
+import { Avatar } from "@mui/material"
 
 function SidebarChat() {
   return (
@@ -11,7 +11,7 @@ function SidebarChat() {
         <p>This is the last message</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default SidebarChat;
+export default SidebarChat

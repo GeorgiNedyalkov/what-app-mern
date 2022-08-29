@@ -1,13 +1,13 @@
-import React from "react";
-import "./Sidebar.css";
-import SidebarChat from "./SidebarChat";
+import React from "react"
+import "./Sidebar.css"
+import SidebarChat from "./SidebarChat"
 
 // Icons
-import ChatIcon from "@mui/icons-material/Chat";
-import DonutLarge from "@mui/icons-material/DonutLarge";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { IconButton, Avatar } from "@mui/material";
+import ChatIcon from "@mui/icons-material/Chat"
+import DonutLarge from "@mui/icons-material/DonutLarge"
+import MoreVertIcon from "@mui/icons-material/MoreVert"
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined"
+import { IconButton, Avatar } from "@mui/material"
 
 function Sidebar() {
   return (
@@ -38,7 +38,7 @@ function Sidebar() {
         <SidebarChat />
       </div>
     </div>
-  );
+  )
 }
 
-export default Sidebar;
+export default Sidebar
