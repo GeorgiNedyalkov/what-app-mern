@@ -24,7 +24,15 @@
   - Connect to MongoDB
   - Define our Data Schema
 - Middlewares
-- DB config
+  - Add express json middleware
 - ???
 - Api routes
+
+  - POST - create new message
+  - GET - retrieve all messages
+
+- Pusher: Connect to Pusher to make MongoDB real time. Similar to Socket IO.
+  - Copy the configuration file
+  - Install Pusha
+  - Require it in
 - Listener
